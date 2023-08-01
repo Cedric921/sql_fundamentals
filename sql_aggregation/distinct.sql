@@ -11,6 +11,9 @@ ON s.id = a.sales_rep_id
 JOIN region r
 ON r.id = s.region_id;
 
+SELECT DISTINCT id, name
+FROM accounts;
+
 
 -- Have any sales reps worked on more than one account?
 
@@ -21,3 +24,5 @@ ON s.id = a.sales_rep_id
 GROUP BY s.id, s.name
 ORDER BY num_accounts;
 
+SELECT DISTINCT id, name
+FROM sales_reps;
